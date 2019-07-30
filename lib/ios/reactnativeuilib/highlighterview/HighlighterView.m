@@ -93,10 +93,7 @@
 
 - (CGSize)getCornerRadiiForHighlightRect:(CGRect)highlightRect {
     CGSize cornerRadii = CGSizeMake(highlightRect.size.width/2, highlightRect.size.height/2);
-    if (self.borderRadius != nil) {
-        CGFloat radius = [self.borderRadius floatValue];
-        cornerRadii = CGSizeMake(radius, radius);
-    }
+    cornerRadii = CGSizeMake(self.borderRadius, self.borderRadius);
     return cornerRadii;
 }
 
@@ -158,6 +155,12 @@
 -(void)setInnerPadding:(CGFloat)innerPadding
 {
     _innerPadding = innerPadding;
+    [self setNeedsDisplay];
+}
+
+-(void)setBorderRadius:(CGFloat)borderRadius
+{
+    _borderRadius = borderRadius;
     [self setNeedsDisplay];
 }
 

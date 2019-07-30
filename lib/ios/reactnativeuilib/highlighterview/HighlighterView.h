@@ -6,7 +6,7 @@
 - (id)initWithFrame:(CGRect)frame bridge:(RCTBridge*)bridge;
 
 @property (nonatomic) CGRect highlightFrame;
-@property (nonatomic, strong) NSNumber *borderRadius;
+@property (nonatomic) CGFloat borderRadius;
 @property (nonatomic, strong) UIColor *overlayColor;
 @property (nonatomic, strong) UIColor *strokeColor;
 @property (nonatomic, strong) NSNumber *strokeWidth;
